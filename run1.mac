@@ -4,9 +4,9 @@
 
 #/process/had/rdm/setPhotoEvaporationFile 3
 /process/had/rdm/applyARM true
-/tracking/verbose 2
+/tracking/verbose 1
 #/process/had/rdm/analogueMC false
 #/process/had/rdm/decayBiasProfile uniform
-/process/had/rdm/hlThreshold 1e9 year
-/run/beamOn 1000
+#/process/had/rdm/hlThreshold 1e9 year
+/run/beamOn 200000
 

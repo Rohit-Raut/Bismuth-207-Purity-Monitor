@@ -8,7 +8,8 @@ HistoManager::HistoManager()
  : fFilename("decay_chain.root"),
    // Initialize IDs to -1 or some invalid sentinel
    fNtupleID_DecayParticles(-1),
-   fNtupleID_EnergyDepositions(-1)
+   fNtupleID_EnergyDepositions(-1),
+   fNtupleID_Anode(-1)
 {
     // Don't open or book anything here.
 }
@@ -58,6 +59,15 @@ void HistoManager::Book()
     fNtupleID_EnergyDepositions = analysisManager->CreateNtuple("EnergyDepositions", "Energy depositions");
     analysisManager->CreateNtupleDColumn("PID");
     analysisManager->CreateNtupleDColumn("Energy");
+    analysisManager->FinishNtuple();
+
+
+    fNtupleID_Anode = analysisManager->CreateNtuple("Anode", "Data from Anode Hits");
+    analysisManager->CreateNtupleSColumn("Particle Name");
+    analysisManager->CreateNtupleDColumn("Edep");
+    analysisManager->CreateNtupleDColumn("xpos");
+    analysisManager->CreateNtupleDColumn("ypos");
+    analysisManager->CreateNtupleDColumn("zpos");
     analysisManager->FinishNtuple();
 
     G4cout << "Book() completed: histograms and ntuples created.\n"
@@ -110,3 +120,13 @@ void HistoManager::FillEnergyDepositionsNtuple(G4double pid, G4double energy)
     analysisManager->AddNtupleRow(fNtupleID_EnergyDepositions);
 }
 
+void HistoManager::FillAnodeNtuple(const G4String& particleName, G4double edep, const G4ThreeVector& position)
+{
+	auto analysisManager = G4GenericAnalysisManager::Instance();
+	analysisManager->FillNtupleSColumn(fNtupleID_Anode, 0, particleName);
+	analysisManager->FillNtupleDColumn(fNtupleID_Anode, 1, edep);
+	analysisManager->FillNtupleDColumn(fNtupleID_Anode, 2, position.x());
+	analysisManager->FillNtupleDColumn(fNtupleID_Anode, 3, position.y());
+	analysisManager->FillNtupleDColumn(fNtupleID_Anode, 4, position.z());
+	analysisManager->AddNtupleRow(fNtupleID_Anode);
+}

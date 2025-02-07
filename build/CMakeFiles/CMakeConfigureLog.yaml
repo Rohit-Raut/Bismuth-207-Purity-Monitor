@@ -1,0 +1,975 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 5.14.0-503.22.1.el9_5.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/3.26.5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/3.26.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_60edf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_60edf.dir/build.make CMakeFiles/cmTC_60edf.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP'
+        Building C object CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -v -o CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/'
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/cc1 -quiet -v -iprefix /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/ -isystem /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_60edf.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/rraut/cchIqxRN.s
+        GNU C17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"
+        ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: ced555e61f70017c79a6d40d78a59931
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/'
+         as -v --64 -o CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o /tmp/rraut/cchIqxRN.s
+        GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37
+        COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/
+        LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_60edf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60edf.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -v -rdynamic CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -o cmTC_60edf 
+        Using built-in specs.
+        COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc
+        COLLECT_LTO_WRAPPER=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.1.0 (GCC) 
+        COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/
+        LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60edf' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_60edf.'
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2 -plugin /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/rraut/ccw9EvwE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_60edf /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../.. CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60edf' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_60edf.'
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_60edf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_60edf.dir/build.make CMakeFiles/cmTC_60edf.dir/build]
+        ignore line: [gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-NoWNYP']
+        ignore line: [Building C object CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -v -o CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/']
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/cc1 -quiet -v -iprefix /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/ -isystem /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_60edf.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/rraut/cchIqxRN.s]
+        ignore line: [GNU C17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: ced555e61f70017c79a6d40d78a59931]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o /tmp/rraut/cchIqxRN.s]
+        ignore line: [GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37]
+        ignore line: [COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/]
+        ignore line: [LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_60edf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60edf.dir/link.txt --verbose=1]
+        ignore line: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -v -rdynamic CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -o cmTC_60edf ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/]
+        ignore line: [LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60edf' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_60edf.']
+        link line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2 -plugin /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/rraut/ccw9EvwE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_60edf /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../.. CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/rraut/ccw9EvwE.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_60edf] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o] ==> obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..]
+          arg [CMakeFiles/cmTC_60edf.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o] ==> obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o]
+        collapse obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib64;/lib64;/usr/lib64;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a949f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a949f.dir/build.make CMakeFiles/cmTC_a949f.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq'
+        Building CXX object CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++   -v -o CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++
+        Target: x86_64-pc-linux-gnu
+        Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/'
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/cc1plus -quiet -v -iprefix /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/ -isystem /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a949f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/rraut/cclILtJB.s
+        GNU C++17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../include"
+        ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"
+        ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 263d790c086c35332e21d34bf0cffc49
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/'
+         as -v --64 -o CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o /tmp/rraut/cclILtJB.s
+        GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37
+        COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/
+        LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a949f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a949f.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++  -v -rdynamic CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a949f 
+        Using built-in specs.
+        COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++
+        COLLECT_LTO_WRAPPER=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.1.0 (GCC) 
+        COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/
+        LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a949f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a949f.'
+         /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2 -plugin /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/rraut/ccGQp6Uh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a949f /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../.. CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a949f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a949f.'
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+          add: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0/x86_64-pc-linux-gnu]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0/backward]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+        collapse include dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0/x86_64-pc-linux-gnu;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include/c++/12.1.0/backward;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a949f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a949f.dir/build.make CMakeFiles/cmTC_a949f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-T1fSFq']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++   -v -o CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/']
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/cc1plus -quiet -v -iprefix /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/ -isystem /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a949f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/rraut/cclILtJB.s]
+        ignore line: [GNU C++17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/include]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include]
+        ignore line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 12.1.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 263d790c086c35332e21d34bf0cffc49]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o /tmp/rraut/cclILtJB.s]
+        ignore line: [GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37]
+        ignore line: [COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/]
+        ignore line: [LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_a949f]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a949f.dir/link.txt --verbose=1]
+        ignore line: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++  -v -rdynamic CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a949f ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: /workspace/build/contrib/gcc-12.1.0/src/gcc/12.1.0/configure --prefix=/workspace/lcgcmake-install/gcc/12.1.0/x86_64-centos9 --disable-nls --with-system-zlib --disable-multilib --enable-languages=all --with-gnu-ld --with-gnu-as --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-plugin --with-linker-hash-style=gnu --enable-linker-build-id --enable-libstdcxx-time=rt --enable-shared --disable-libgcj]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/]
+        ignore line: [LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a949f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a949f.']
+        link line: [ /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2 -plugin /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/rraut/ccGQp6Uh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a949f /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../.. CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../libexec/gcc/x86_64-pc-linux-gnu/12.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/rraut/ccGQp6Uh.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_a949f] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o] ==> obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..] ==> dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..]
+          arg [CMakeFiles/cmTC_a949f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o] ==> obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o]
+        collapse obj [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../lib64] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/../lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../..] ==> [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtbegin.o;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc/x86_64-pc-linux-gnu/12.1.0;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib/gcc;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib64;/lib64;/usr/lib64;/cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/PTL/PTLConfig.cmake:56 (find_dependency)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:292 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c2329/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c2329.dir/build.make CMakeFiles/cmTC_c2329.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP'
+        Building C object CMakeFiles/cmTC_c2329.dir/src.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c2329.dir/src.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP/src.c
+        Linking C executable cmTC_c2329
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2329.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc CMakeFiles/cmTC_c2329.dir/src.c.o -o cmTC_c2329 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-VRW7xP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:238 (try_compile)"
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:584 (_HDF5_test_regular_compiler_C)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:359 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-2kXq0W"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-2kXq0W"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "HDF5_C_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-2kXq0W
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ee785/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ee785.dir/build.make CMakeFiles/cmTC_ee785.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-2kXq0W'
+        Building C object CMakeFiles/cmTC_ee785.dir/cmake_hdf5_test.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc    -o CMakeFiles/cmTC_ee785.dir/cmake_hdf5_test.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/hdf5/cmake_hdf5_test.c
+        Linking C executable cmTC_ee785
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee785.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc CMakeFiles/cmTC_ee785.dir/cmake_hdf5_test.c.o -o cmTC_ee785 
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: CMakeFiles/cmTC_ee785.dir/cmake_hdf5_test.c.o: in function `main':
+        cmake_hdf5_test.c:(.text+0x3e): undefined reference to `H5check_version'
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: cmake_hdf5_test.c:(.text+0x43): undefined reference to `H5open'
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: cmake_hdf5_test.c:(.text+0x5c): undefined reference to `H5Fcreate'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_ee785.dir/build.make:99: cmTC_ee785] Error 1
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-2kXq0W'
+        gmake: *** [Makefile:127: cmTC_ee785/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCXXSymbolExists.cmake:77 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/G4HDF5Shim.cmake:15 (check_cxx_symbol_exists)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:360 (include)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for H5_HAVE_THREADSAFE"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "GEANT4_HAVE_H5_HAVE_THREADSAFE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_64e89/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_64e89.dir/build.make CMakeFiles/cmTC_64e89.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY'
+        Building CXX object CMakeFiles/cmTC_64e89.dir/CheckSymbolExists.cxx.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++  -I/cvmfs/sft.cern.ch/lcg/releases/hdf5/1.12.2-4c7fc/x86_64-centos9-gcc12-opt/include  -o CMakeFiles/cmTC_64e89.dir/CheckSymbolExists.cxx.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_64e89
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64e89.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/g++ CMakeFiles/cmTC_64e89.dir/CheckSymbolExists.cxx.o -o cmTC_64e89 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-wA0uhY'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:498 (check_library_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "X11_LIB_X11_SOLO"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_09d8b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_09d8b.dir/build.make CMakeFiles/cmTC_09d8b.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW'
+        Building C object CMakeFiles/cmTC_09d8b.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_09d8b.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW/CheckFunctionExists.c
+        Linking C executable cmTC_09d8b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09d8b.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_09d8b.dir/CheckFunctionExists.c.o -o cmTC_09d8b  /usr/lib64/libX11.so /usr/lib64/libXext.so 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-0esUTW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:513 (check_function_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for gethostbyname"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_GETHOSTBYNAME"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f00c9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f00c9.dir/build.make CMakeFiles/cmTC_f00c9.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8'
+        Building C object CMakeFiles/cmTC_f00c9.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_f00c9.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8/CheckFunctionExists.c
+        Linking C executable cmTC_f00c9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f00c9.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_f00c9.dir/CheckFunctionExists.c.o -o cmTC_f00c9 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-dLPUO8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:527 (check_function_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for connect"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_CONNECT"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bf93b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bf93b.dir/build.make CMakeFiles/cmTC_bf93b.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR'
+        Building C object CMakeFiles/cmTC_bf93b.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_bf93b.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR/CheckFunctionExists.c
+        Linking C executable cmTC_bf93b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf93b.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_bf93b.dir/CheckFunctionExists.c.o -o cmTC_bf93b 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-9aAjOR'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:536 (check_function_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for remove"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_REMOVE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_77e4d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77e4d.dir/build.make CMakeFiles/cmTC_77e4d.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU'
+        Building C object CMakeFiles/cmTC_77e4d.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_77e4d.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU/CheckFunctionExists.c
+        Linking C executable cmTC_77e4d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77e4d.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_77e4d.dir/CheckFunctionExists.c.o -o cmTC_77e4d 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-7zxgPU'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:545 (check_function_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for shmat"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_SHMAT"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_78a50/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_78a50.dir/build.make CMakeFiles/cmTC_78a50.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU'
+        Building C object CMakeFiles/cmTC_78a50.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_78a50.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU/CheckFunctionExists.c
+        Linking C executable cmTC_78a50
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78a50.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_78a50.dir/CheckFunctionExists.c.o -o cmTC_78a50 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-k4IuBU'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/usr/share/cmake/Modules/FindX11.cmake:555 (check_library_exists)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:401 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for IceConnectionNumber in ICE"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5e1a7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5e1a7.dir/build.make CMakeFiles/cmTC_5e1a7.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y'
+        Building C object CMakeFiles/cmTC_5e1a7.dir/CheckFunctionExists.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_5e1a7.dir/CheckFunctionExists.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y/CheckFunctionExists.c
+        Linking C executable cmTC_5e1a7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e1a7.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_5e1a7.dir/CheckFunctionExists.c.o -o cmTC_5e1a7  -lICE 
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-Qq2a0y'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:238 (try_compile)"
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:584 (_HDF5_test_regular_compiler_C)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:359 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-TTbom8"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-TTbom8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "HDF5_C_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-TTbom8
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f65b8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f65b8.dir/build.make CMakeFiles/cmTC_f65b8.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-TTbom8'
+        Building C object CMakeFiles/cmTC_f65b8.dir/cmake_hdf5_test.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc    -o CMakeFiles/cmTC_f65b8.dir/cmake_hdf5_test.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/hdf5/cmake_hdf5_test.c
+        Linking C executable cmTC_f65b8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f65b8.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc CMakeFiles/cmTC_f65b8.dir/cmake_hdf5_test.c.o -o cmTC_f65b8 
+        /usr/bin/ld: CMakeFiles/cmTC_f65b8.dir/cmake_hdf5_test.c.o: in function `main':
+        cmake_hdf5_test.c:(.text+0x3e): undefined reference to `H5check_version'
+        /usr/bin/ld: cmake_hdf5_test.c:(.text+0x43): undefined reference to `H5open'
+        /usr/bin/ld: cmake_hdf5_test.c:(.text+0x5c): undefined reference to `H5Fcreate'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_f65b8.dir/build.make:99: cmTC_f65b8] Error 1
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-TTbom8'
+        gmake: *** [Makefile:127: cmTC_f65b8/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:238 (try_compile)"
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:584 (_HDF5_test_regular_compiler_C)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:359 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "HDF5_C_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b87da/fast && gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b87da.dir/build.make CMakeFiles/cmTC_b87da.dir/build
+        gmake[2]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ'
+        Building C object CMakeFiles/cmTC_b87da.dir/cmake_hdf5_test.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc    -o CMakeFiles/cmTC_b87da.dir/cmake_hdf5_test.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/hdf5/cmake_hdf5_test.c
+        Linking C executable cmTC_b87da
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b87da.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc CMakeFiles/cmTC_b87da.dir/cmake_hdf5_test.c.o -o cmTC_b87da 
+        /usr/bin/ld: CMakeFiles/cmTC_b87da.dir/cmake_hdf5_test.c.o: in function `main':
+        cmake_hdf5_test.c:(.text+0x3e): undefined reference to `H5check_version'
+        /usr/bin/ld: cmake_hdf5_test.c:(.text+0x43): undefined reference to `H5open'
+        /usr/bin/ld: cmake_hdf5_test.c:(.text+0x5c): undefined reference to `H5Fcreate'
+        collect2: error: ld returned 1 exit status
+        gmake[2]: *** [CMakeFiles/cmTC_b87da.dir/build.make:99: cmTC_b87da] Error 1
+        gmake[2]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ'
+        gmake[1]: *** [Makefile:127: cmTC_b87da/fast] Error 2
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-ej7BMQ'
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:238 (try_compile)"
+      - "/usr/share/cmake/Modules/FindHDF5.cmake:584 (_HDF5_test_regular_compiler_C)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Geant4Config.cmake:359 (find_dependency)"
+      - "CMakeLists.txt:3 (find_package)"
+    directories:
+      source: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-MfrYvz"
+      binary: "/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-MfrYvz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/geant4.cern.ch/geant4/11.1/x86_64-centos9-gcc12-optdeb-MT/lib64/cmake/Geant4/Modules"
+    buildResult:
+      variable: "HDF5_C_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-MfrYvz
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7da51/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7da51.dir/build.make CMakeFiles/cmTC_7da51.dir/build
+        gmake[1]: Entering directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-MfrYvz'
+        Building C object CMakeFiles/cmTC_7da51.dir/cmake_hdf5_test.c.o
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc    -o CMakeFiles/cmTC_7da51.dir/cmake_hdf5_test.c.o -c /afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/hdf5/cmake_hdf5_test.c
+        Linking C executable cmTC_7da51
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7da51.dir/link.txt --verbose=1
+        /cvmfs/sft.cern.ch/lcg/releases/gcc/12.1.0-57c96/x86_64-centos9/bin/gcc CMakeFiles/cmTC_7da51.dir/cmake_hdf5_test.c.o -o cmTC_7da51 
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: CMakeFiles/cmTC_7da51.dir/cmake_hdf5_test.c.o: in function `main':
+        cmake_hdf5_test.c:(.text+0x3e): undefined reference to `H5check_version'
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: cmake_hdf5_test.c:(.text+0x43): undefined reference to `H5open'
+        /cvmfs/sft.cern.ch/lcg/releases/binutils/2.37-355ed/x86_64-centos9/bin/ld: cmake_hdf5_test.c:(.text+0x5c): undefined reference to `H5Fcreate'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_7da51.dir/build.make:99: cmTC_7da51] Error 1
+        gmake[1]: Leaving directory '/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/CMakeScratch/TryCompile-MfrYvz'
+        gmake: *** [Makefile:127: cmTC_7da51/fast] Error 2
+        
+      exitCode: 2
+...
