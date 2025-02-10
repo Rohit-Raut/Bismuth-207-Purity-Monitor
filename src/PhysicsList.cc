@@ -19,7 +19,7 @@
 #include "G4PhotoElectricEffect.hh"
 #include "G4ComptonScattering.hh"
 #include "G4GammaConversion.hh"
-
+#include "G4DecayPhysics.hh"
 
 
 
@@ -64,6 +64,7 @@ void PhysicsList::ConstructProcess()
     //Ion physics
     G4IonPhysics* ionPhysics = new G4IonPhysics();
     ionPhysics->ConstructProcess();
+
 
 
     G4RadioactiveDecay* radioactiveDecay = new G4RadioactiveDecay();

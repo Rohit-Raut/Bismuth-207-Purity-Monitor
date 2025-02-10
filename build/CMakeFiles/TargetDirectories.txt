@@ -1,3 +1,0 @@
-/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/GEANT4.dir
-/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/edit_cache.dir
-/afs/cern.ch/user/r/rraut/private/Bismuth-207-Purity-Monitor-Sim/build/CMakeFiles/rebuild_cache.dir
