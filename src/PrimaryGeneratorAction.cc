@@ -38,58 +38,58 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-//    particleSource->SetParticleDefinition(GetBi207());
-//    particleSource->SetParticlePosition(G4ThreeVector(0, 0, 0));
-//    particleSource->GeneratePrimaryVertex(anEvent);
-     	Bi207Decay(anEvent);
-    	G4cout << "generate Bi-207 at rest "<< G4endl;
+   particleSource->SetParticleDefinition(GetBi207());
+   particleSource->SetParticlePosition(G4ThreeVector(0, 0, -3.25*cm));
+   particleSource->GeneratePrimaryVertex(anEvent);
+     	// Bi207Decay(anEvent);
+    	// G4cout << "generate Bi-207 at rest "<< G4endl;
 }
 
 
-void PrimaryGeneratorAction::Bi207Decay(G4Event* anEvent)
-{   
-     struct Bi207decayproduct{
-         G4ParticleDefinition* particle;
-         G4double energy;
-         G4double probability;
-     };
-     std::vector<Bi207decayproduct> decaySpectrum = {
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  569.7 * keV, 0.9976 }, // 569.7 keV gamma (~99.76%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1063.7 * keV, 0.7458 }, // 1063.7 keV gamma (~74.58%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1770.2 * keV, 0.0687 }, // 1770.2 keV gamma (~6.87%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  328.1 * keV, 0.000044 }, // 328.1 keV gamma (~0.0044%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  897.8 * keV, 0.001284 }, // 897.8 keV gamma (~0.1284%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1442.2 * keV, 0.001315 }, // 1442.2 keV gamma (~0.1315%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  511.0 * keV, 0.00024 }, // 511 keV gamma (~0.024%) from positron annihilation
+// void PrimaryGeneratorAction::Bi207Decay(G4Event* anEvent)
+// {   
+//      struct Bi207decayproduct{
+//          G4ParticleDefinition* particle;
+//          G4double energy;
+//          G4double probability;
+//      };
+//      std::vector<Bi207decayproduct> decaySpectrum = {
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  569.7 * keV, 0.9976 }, // 569.7 keV gamma (~99.76%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1063.7 * keV, 0.7458 }, // 1063.7 keV gamma (~74.58%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1770.2 * keV, 0.0687 }, // 1770.2 keV gamma (~6.87%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  328.1 * keV, 0.000044 }, // 328.1 keV gamma (~0.0044%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  897.8 * keV, 0.001284 }, // 897.8 keV gamma (~0.1284%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1442.2 * keV, 0.001315 }, // 1442.2 keV gamma (~0.1315%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  511.0 * keV, 0.00024 }, // 511 keV gamma (~0.024%) from positron annihilation
 
-//         // Internal conversion electrons
-         { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  975.0 * keV, 0.0711 }, // Internal conversion electron (~7.11%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  1047.8 * keV, 0.0184 }, // Internal conversion electron (~1.84%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  1062.8 * keV, 0.01193 }, // Internal conversion electron (~1.193%)
-         { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  481.7 * keV, 0.01548 }, // Internal conversion electron (~1.548%)
+// //         // Internal conversion electrons
+//          { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  975.0 * keV, 0.0711 }, // Internal conversion electron (~7.11%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  1047.8 * keV, 0.0184 }, // Internal conversion electron (~1.84%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  1062.8 * keV, 0.01193 }, // Internal conversion electron (~1.193%)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("e-"),  481.7 * keV, 0.01548 }, // Internal conversion electron (~1.548%)
 
-//         // Beta-plus decay (rare)
-         { G4ParticleTable::GetParticleTable()->FindParticle("e+"),  805.8 * keV, 0.00012 } // Beta+ emission (~0.012%)
-     };
-     G4double randSample = G4UniformRand();
-     G4double cumulativeProb = 0.0;
-     for (const auto& decayProduct : decaySpectrum)
-     {
-         cumulativeProb += decayProduct.probability;
-         if (randSample <= cumulativeProb)
-         {
-             G4ThreeVector direction = RandomDirection();
-             G4PrimaryVertex* vertex = new G4PrimaryVertex(G4ThreeVector(0, 0, 0), 0);
-             G4PrimaryParticle* particle = new G4PrimaryParticle(decayProduct.particle, decayProduct.energy * direction.x(), decayProduct.energy * direction.y(), decayProduct.energy * direction.z());
-             vertex->SetPrimary(particle);
-             anEvent->AddPrimaryVertex(vertex);
-             G4cout<<"Generated "<<decayProduct.particle->GetParticleName()<<" at "<<decayProduct.energy/keV<<"keV"<<G4endl;
-             break;
-         }
-     }
+// //         // Beta-plus decay (rare)
+//          { G4ParticleTable::GetParticleTable()->FindParticle("e+"),  805.8 * keV, 0.00012 } // Beta+ emission (~0.012%)
+//      };
+//      G4double randSample = G4UniformRand();
+//      G4double cumulativeProb = 0.0;
+//      for (const auto& decayProduct : decaySpectrum)
+//      {
+//          cumulativeProb += decayProduct.probability;
+//          if (randSample <= cumulativeProb)
+//          {
+//              G4ThreeVector direction = RandomDirection();
+//              G4PrimaryVertex* vertex = new G4PrimaryVertex(G4ThreeVector(0, 0, 0), 0);
+//              G4PrimaryParticle* particle = new G4PrimaryParticle(decayProduct.particle, decayProduct.energy * direction.x(), decayProduct.energy * direction.y(), decayProduct.energy * direction.z());
+//              vertex->SetPrimary(particle);
+//              anEvent->AddPrimaryVertex(vertex);
+//              G4cout<<"Generated "<<decayProduct.particle->GetParticleName()<<" at "<<decayProduct.energy/keV<<"keV"<<G4endl;
+//              break;
+//          }
+//      }
 
 
-}
+// }
 
 G4ThreeVector PrimaryGeneratorAction::RandomDirection()
 {

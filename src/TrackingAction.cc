@@ -36,7 +36,8 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
     G4double energy = track->GetKineticEnergy();
     G4double time = track->GetGlobalTime();
     G4double weight = track->GetWeight();
-    runAction ->GetHistoManager()->FillDecayParticlesNtuple(pid, energy);
+    // runAction ->GetHistoManager()->FillDecayParticlesNtuple(pid, energy); 
+    runAction ->GetHistoManager()->FillDecayParticlesNtuple(pid, energy);   
     // if (creator==fRadioactiveDecay){
     //     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     //     G4int id= 0;

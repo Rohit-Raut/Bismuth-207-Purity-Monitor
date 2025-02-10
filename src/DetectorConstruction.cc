@@ -67,14 +67,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, matLar, "World");
     G4VPhysicalVolume* physWorld = new G4PVPlacement(nullptr, G4ThreeVector(), logicWorld, "World", nullptr, false, 0);
      //this is for ActiveLAr
-    G4Tubs* solidActive = new G4Tubs("ActiveLar",0.0, fOuterRadius, 0.5 * fDriftLength, 0. , 360. * deg);
+    G4Tubs* solidActive = new G4Tubs("ActiveLar",0.0, fOuterRadius, 0.499*fDriftLength, 0. , 360. * deg);
     fLogicActive = new G4LogicalVolume(solidActive, matLar, "ActiveLar");
     new G4PVPlacement(nullptr, G4ThreeVector(), fLogicActive, "ActiveLar", logicWorld, false, 0);
 
 
     //Here lets create a anode region
     G4double anodeThickness = 0.1 * mm;
-    G4double zPosAnode = 0.5 * fDriftLength + 0.5 * anodeThickness;
+    G4double zPosAnode = 0.5*fDriftLength;
 
     //InnerDisk anode
     G4Tubs* solidInnerDisk = new G4Tubs("InnerDisk", 0., fInnerRadius, 0.5 * anodeThickness, 0., 360. * deg);
@@ -90,15 +90,16 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     //cathode place to encapsulate the Bismuth with solid titanium
     G4Material* matTi = nist->FindOrBuildMaterial("G4_Ti");
     G4double cathodeRadius = 3.0 * cm;
-    G4double cathodeThickness = 0.1 * mm;
+    G4double cathodeThickness = 0.01 * mm;
+    G4double zPosCathode = -0.5*fDriftLength + 0.5 * cathodeThickness;
     G4Tubs* solidCathode = new G4Tubs("Cathode", 0., cathodeRadius, 0.5 * cathodeThickness, 0., 360. * deg);
     G4LogicalVolume* logicCathode = new G4LogicalVolume(solidCathode, matTi, "Cathode");
-    new G4PVPlacement(nullptr, G4ThreeVector(0., 0., -0.5 * fDriftLength - 0.5 * cathodeThickness), logicCathode, "Cathode", logicWorld, false, 0, true);
+    new G4PVPlacement(nullptr, G4ThreeVector(0., 0., zPosCathode), logicCathode, "Cathode", logicWorld, false, 0, true);
 
     //source parameters
     G4double biDiameter = 5.0 * mm;
     G4double biRadius = biDiameter * 0.5;
-    G4double biThickness = 0.05 * mm;
+    G4double biThickness = 0.01 * mm;
     G4ThreeVector biPosition(0.0,0.0,0.0);
     
     //Bismuth encapsulated in Titanium foil
@@ -109,15 +110,13 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     //Bismuth source
     G4Tubs* solidBi207 = new G4Tubs("Bi207Source", 0., biRadius, 0.5 * biThickness, 0., 360. * deg);
     G4LogicalVolume* logicBi207 = new G4LogicalVolume(solidBi207, matBi207, "Bi207Source");
-    G4PVPlacement* physBi207 = new G4PVPlacement(nullptr, biPosition, logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
+    G4PVPlacement* physBi207 = new G4PVPlacement(nullptr, G4ThreeVector(0.0,0.0,0.0), logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
     //testing with decay, increasing decay limit to force bismuth to decay within 1ns
     // G4UserLimits* decayLimits = new G4UserLimits();
     // decayLimits -> SetMaxAllowedTime(1.0*ns);
     // logicBi207 = SetUserLimits(decayLimits);
-
-
-    //for Electrif Field inside the detector
-    G4cout << "DEBUG: Constructing geometry volumes" << G4endl;
+    G4cout << "Bi207 World Position: " << physBi207->GetTranslation() << G4endl;
+    G4cout<<"Debugging117 Cathode Position: "<<zPosCathode<< " Anode Position: "<<zPosAnode<<" Bi207 position: "<<biPosition<<G4endl;
 
 
     logicWorld->SetVisAttributes(G4VisAttributes::GetInvisible());
@@ -133,10 +132,10 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4VisAttributes* viscathode = new G4VisAttributes(G4Colour(0.6, 0.6,0.6, 0.2));
     logicCathode->SetVisAttributes(viscathode);
 
-    G4VisAttributes* visAttrFoil = new G4VisAttributes(G4Colour(0.19, 0.19, 0.19,0.3)); 
+    G4VisAttributes* visAttrFoil = new G4VisAttributes(G4Colour(0.19, 0.19, 0.19,0.01)); 
     logicTiFoil->SetVisAttributes(visAttrFoil);
 
-    G4VisAttributes* visAttrBi207 = new G4VisAttributes(G4Colour(0.24, 0.23, 0.23,1.0)); 
+    G4VisAttributes* visAttrBi207 = new G4VisAttributes(G4Colour(0.25, 0., 0.,1.0)); 
     logicBi207->SetVisAttributes(visAttrBi207);
     G4cout << "DEBUG: Done with DetectorConstruction::Construct()" << G4endl;
     return physWorld;

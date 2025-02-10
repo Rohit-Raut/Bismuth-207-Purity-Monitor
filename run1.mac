@@ -9,5 +9,5 @@
 #/process/had/rdm/decayBiasProfile uniform
 #/process/had/rdm/hlThreshold 1e9 year
 #/progress/fullChain true
-/run/beamOn 20000
+/run/beamOn 100000
 

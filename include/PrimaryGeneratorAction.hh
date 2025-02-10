@@ -12,7 +12,7 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     public:
         PrimaryGeneratorAction();
         virtual ~PrimaryGeneratorAction();
-        virtual void Bi207Decay(G4Event* anEvent);
+        //virtual void Bi207Decay(G4Event* anEvent);
 	virtual void GeneratePrimaries(G4Event* anEvent);
     private:
         G4GeneralParticleSource* particleSource;
