@@ -79,20 +79,21 @@ int main(int argc, char** argv)
     TrackingAction* trackingAction = new TrackingAction(runAction);
     runManager->SetUserAction(trackingAction);
 
-    //G4VisManager* visManager = new G4VisExecutive;
-    //visManager->Initialize();
+    // G4VisManager* visManager = new G4VisExecutive;
+    // visManager->Initialize();
 
-    //G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+    G4UIExecutive* ui = new G4UIExecutive(argc, argv);
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
-    //UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
-    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/run1.mac");
-   // ui->SessionStart();
-    //delete ui;
-    //delete visManager;
+    //UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Bismuth-207-Purity-Monitor-Sim/run1.mac");
+    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Bismuth-207-Purity-Monitor-Sim/run1.mac");
+    // ui->SessionStart();
     // delete runAction;
     // delete eventAction;
     // delete steppingAction;
     // delete primaryGeneratorAction;
+
+    // delete ui;
+    // delete visManager;
     delete runManager;
     delete histo;
     return 0;

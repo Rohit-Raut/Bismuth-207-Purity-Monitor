@@ -19,14 +19,17 @@
 #include "G4PhotoElectricEffect.hh"
 #include "G4ComptonScattering.hh"
 #include "G4GammaConversion.hh"
+#include "G4DecayPhysics.hh"
 
+#include "DetectorConstruction.hh"
 
 
 
 PhysicsList::PhysicsList() : G4VModularPhysicsList()
 {
-    const G4double meanlife = 1 * nanosecond;
-    G4NuclideTable::GetInstance()->SetMeanLifeThreshold(meanlife);
+    // const G4double meanlife = 1 * nanosecond;
+    // G4NuclideTable::GetInstance()->SetMeanLifeThreshold(meanlife);
+    G4NuclideTable::GetInstance()->SetMeanLifeThreshold(1e+60*s); 
     G4NuclideTable::GetInstance()->SetLevelTolerance(10.0 * eV);
     SetDefaultCutValue(1.0 * mm);
 
@@ -65,21 +68,24 @@ void PhysicsList::ConstructProcess()
     ionPhysics->ConstructProcess();
 
 
+
     G4RadioactiveDecay* radioactiveDecay = new G4RadioactiveDecay();
     radioactiveDecay->SetVerboseLevel(1);
-    radioactiveDecay->SetARM(true);
-    G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+    radioactiveDecay->SetARM(false);
+    G4ParticleDefinition* bi207 = G4IonTable::GetIonTable()->GetIon(83, 207);
+    G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay, bi207);
+    //G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay,G4GenericIon::GenericIon());
 
     G4LossTableManager* lossManager = G4LossTableManager::Instance();
-    G4VAtomDeexcitation* de = lossManager->AtomDeexcitation();
-    if (!de)
-    {
-        de = new G4UAtomicDeexcitation();
-        lossManager->SetAtomDeexcitation(de);
-    }
-    de->InitialiseAtomicDeexcitation();
+    G4VAtomDeexcitation* de = new G4UAtomicDeexcitation();
+    de->SetFluo(true);
+    de->SetAuger(true);
+    de->SetPIXE(true);
+    lossManager->SetAtomDeexcitation(de);
+
+
     G4PhysicsListHelper* ph = G4PhysicsListHelper::GetPhysicsListHelper();
-    ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+    //ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
     auto gamma = G4ParticleTable::GetParticleTable()->FindParticle("gamma");
     ph->RegisterProcess(new G4PhotoElectricEffect(), gamma);
     ph->RegisterProcess(new G4ComptonScattering(), gamma);

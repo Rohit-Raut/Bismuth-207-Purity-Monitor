@@ -12,11 +12,13 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     public:
         PrimaryGeneratorAction();
         virtual ~PrimaryGeneratorAction();
-        virtual void GeneratePrimaries(G4Event* anEvent);
+        //virtual void Bi207Decay(G4Event* anEvent);
+	virtual void GeneratePrimaries(G4Event* anEvent);
     private:
         G4GeneralParticleSource* particleSource;
         G4ParticleDefinition* GetBi207();
-        void Bi207Decay(G4Event* anEvent);
+        G4ThreeVector RandomPosition();
+        //void Bi207Decay(G4Event* anEvent);
         G4ThreeVector RandomDirection();
 	    G4double gamma_energy;
 };

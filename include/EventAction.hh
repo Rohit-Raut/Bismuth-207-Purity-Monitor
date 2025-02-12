@@ -5,6 +5,7 @@
 #include "G4UserEventAction.hh"
 #include "G4String.hh"
 #include "globals.hh"
+#include <vector>
 
 class HistoManager;
 class G4Event;
