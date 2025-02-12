@@ -5,7 +5,11 @@
 #include "G4SystemOfUnits.hh"
 #include "G4RadioactiveDecay.hh"
 #include "Randomize.hh"
-
+#include "G4LogicalVolumeStore.hh"
+#include "G4LogicalVolume.hh"
+#include "G4Tubs.hh"
+#include "G4VSolid.hh"
+#include "DetectorConstruction.hh"
 
 
 G4ParticleDefinition* PrimaryGeneratorAction::GetBi207()
@@ -38,11 +42,15 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-   particleSource->SetParticleDefinition(GetBi207());
-   particleSource->SetParticlePosition(G4ThreeVector(0, 0, -3.25*cm));
-   particleSource->GeneratePrimaryVertex(anEvent);
-     	// Bi207Decay(anEvent);
-    	// G4cout << "generate Bi-207 at rest "<< G4endl;
+   G4double motherZWorld = -2.9995*cm;
+   G4ThreeVector pos = RandomPosition();
+   G4ThreeVector globalPos =  pos+G4ThreeVector(0,0,motherZWorld);
+   G4PrimaryVertex* vertex = new G4PrimaryVertex(globalPos, 0.); 
+   G4PrimaryParticle* particle = new G4PrimaryParticle(GetBi207());
+   vertex->SetPrimary(particle);
+   anEvent->AddPrimaryVertex(vertex);
+//    particleSource->SetParticleDefinition(GetBi207());
+//    particleSource->GeneratePrimaryVertex(anEvent);
 }
 
 
@@ -100,6 +108,25 @@ G4ThreeVector PrimaryGeneratorAction::RandomDirection()
     G4double z = std::cos(theta);
     return G4ThreeVector(x, y, z);
 }
+
+G4ThreeVector PrimaryGeneratorAction::RandomPosition()                                                                                                         
+{                                                                                                                                                              
+  G4LogicalVolume* srcLV = G4LogicalVolumeStore::GetInstance()->GetVolume("Bi207Source");   
+  G4Tubs* biTubs = dynamic_cast<G4Tubs*>(srcLV->GetSolid());                                                                   
+  G4double outerRadius = biTubs->GetOuterRadius();                                                                                                              
+  G4double innerRadius = biTubs->GetInnerRadius();                                                                                                            
+  G4double halfLength = biTubs->GetZHalfLength();                                                                                                             
+
+  G4cout<<"Debugging line 115 in PrimaryGeneratorAction.cc: "<<outerRadius<<" "<<innerRadius<<"  "<<halfLength<<G4endl;                                                                                                        
+  G4double x, y, z, r, theta;                                                                                                                                  
+  r = std::sqrt(G4UniformRand() * (outerRadius * outerRadius - innerRadius * innerRadius) + innerRadius * innerRadius);                                        
+  theta = G4UniformRand() * 2.0 * CLHEP::pi;                                                                                                                   
+  x = r * std::cos(theta);                                                                                                                                     
+  y = r * std::sin(theta);                                                                                                                                     
+  z = (G4UniformRand() * 2.0 - 1.0) * halfLength;                                                                                                              
+  G4cout<<"Debugging line 122 in PrimaryGeneratorAction: "<<x<<" "<<y<<"  "<<z<<G4endl;                                                                                                                                                        
+  return G4ThreeVector(x, y, z);                                                                                                                               
+} 
 
  
 PrimaryGeneratorAction::~PrimaryGeneratorAction()

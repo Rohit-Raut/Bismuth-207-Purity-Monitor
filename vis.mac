@@ -3,12 +3,12 @@
 /run/initialize
 /control/verbose 0
 /run/verbose 0
-/tracking/verbose 0
+/tracking/verbose 2
 /event/verbose 0
 /particle/select all
 /particle/verbose 0
 /process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
-/process/had/rdm/applyARM true
+/process/had/rdm/applyARM false
 # Open an OpenGL visualization window (600x600 pixels, positioned at 0+0)
 /vis/open OGL 600x600-0+0
 
@@ -32,4 +32,4 @@
 /vis/verbose warnings
 
 # Run 10 events (adjust the number as needed)
-/run/beamOn 5
+/run/beamOn 100

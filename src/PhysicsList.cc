@@ -21,6 +21,8 @@
 #include "G4GammaConversion.hh"
 #include "G4DecayPhysics.hh"
 
+#include "DetectorConstruction.hh"
+
 
 
 PhysicsList::PhysicsList() : G4VModularPhysicsList()
@@ -69,7 +71,7 @@ void PhysicsList::ConstructProcess()
 
     G4RadioactiveDecay* radioactiveDecay = new G4RadioactiveDecay();
     radioactiveDecay->SetVerboseLevel(1);
-    radioactiveDecay->SetARM(true);
+    radioactiveDecay->SetARM(false);
     G4ParticleDefinition* bi207 = G4IonTable::GetIonTable()->GetIon(83, 207);
     G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay, bi207);
     //G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay,G4GenericIon::GenericIon());
@@ -83,7 +85,7 @@ void PhysicsList::ConstructProcess()
 
 
     G4PhysicsListHelper* ph = G4PhysicsListHelper::GetPhysicsListHelper();
-    ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+    //ph->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
     auto gamma = G4ParticleTable::GetParticleTable()->FindParticle("gamma");
     ph->RegisterProcess(new G4PhotoElectricEffect(), gamma);
     ph->RegisterProcess(new G4ComptonScattering(), gamma);

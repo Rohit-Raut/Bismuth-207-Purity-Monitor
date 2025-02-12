@@ -32,7 +32,7 @@ DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(),
     fInnerRadius(1.50 * cm),
     fOuterRadius(3.0 * cm),
-    fDriftLength(6.5 * cm),
+    fDriftLength(6.0 * cm),
     fLogicActive(nullptr),
     fFieldMgr(nullptr),
     fChordFinder(nullptr)
@@ -94,29 +94,29 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4double zPosCathode = -0.5*fDriftLength + 0.5 * cathodeThickness;
     G4Tubs* solidCathode = new G4Tubs("Cathode", 0., cathodeRadius, 0.5 * cathodeThickness, 0., 360. * deg);
     G4LogicalVolume* logicCathode = new G4LogicalVolume(solidCathode, matTi, "Cathode");
-    new G4PVPlacement(nullptr, G4ThreeVector(0., 0., zPosCathode), logicCathode, "Cathode", logicWorld, false, 0, true);
+    auto cathodePV = new G4PVPlacement(nullptr, G4ThreeVector(0., 0., zPosCathode), logicCathode, "Cathode", logicWorld, false, 0, true);
 
     //source parameters
     G4double biDiameter = 5.0 * mm;
     G4double biRadius = biDiameter * 0.5;
     G4double biThickness = 0.01 * mm;
-    G4ThreeVector biPosition(0.0,0.0,0.0);
+    G4ThreeVector biPosition(0.0,0.0,0.);
     
     //Bismuth encapsulated in Titanium foil
     G4Tubs* solidTiFoil = new G4Tubs("TiFoil", 0., biRadius+biThickness, 0.5 * biThickness, 0., 360. * deg);
     G4LogicalVolume* logicTiFoil = new G4LogicalVolume(solidTiFoil, matTi, "TiFoil");
-    new G4PVPlacement(nullptr, biPosition, logicTiFoil, "TiFoil", logicCathode, false, 0, true);
+    auto tiFoilPV = new G4PVPlacement(nullptr, biPosition, logicTiFoil, "TiFoil", logicCathode, false, 0, true);
 
     //Bismuth source
     G4Tubs* solidBi207 = new G4Tubs("Bi207Source", 0., biRadius, 0.5 * biThickness, 0., 360. * deg);
     G4LogicalVolume* logicBi207 = new G4LogicalVolume(solidBi207, matBi207, "Bi207Source");
-    G4PVPlacement* physBi207 = new G4PVPlacement(nullptr, G4ThreeVector(0.0,0.0,0.0), logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
+    auto BiPV = new G4PVPlacement(nullptr, G4ThreeVector(0.,0.,0.), logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
     //testing with decay, increasing decay limit to force bismuth to decay within 1ns
     // G4UserLimits* decayLimits = new G4UserLimits();
     // decayLimits -> SetMaxAllowedTime(1.0*ns);
     // logicBi207 = SetUserLimits(decayLimits);
-    G4cout << "Bi207 World Position: " << physBi207->GetTranslation() << G4endl;
-    G4cout<<"Debugging117 Cathode Position: "<<zPosCathode<< " Anode Position: "<<zPosAnode<<" Bi207 position: "<<biPosition<<G4endl;
+    G4cout << "Bi207 World Position: " << BiPV->GetTranslation()<<" Cathode World Position: "<<cathodePV->GetTranslation()<<" TinFoil World Position: "<<tiFoilPV->GetTranslation()<<G4endl;
+    //G4cout<<"Debugging117 Cathode Position: "<<zPosCathode<< " Anode Position: "<<zPosAnode<<" Bi207 position: "<<biPosition<<G4endl;
 
 
     logicWorld->SetVisAttributes(G4VisAttributes::GetInvisible());
@@ -152,7 +152,7 @@ void DetectorConstruction::ConstructSDandField()
     }
     fieldIsInitialized = true;
     //this was created to generate the uniform electric field given by fieldValue
-    G4ThreeVector fieldValue(0.,0.,5.0*volt/cm);
+    G4ThreeVector fieldValue(0.,0.,-500.0*volt/cm);
     auto uniformEField = new G4UniformElectricField(fieldValue);
     auto equation = new G4EqMagElectricField(uniformEField);
     G4int nvar = 8;

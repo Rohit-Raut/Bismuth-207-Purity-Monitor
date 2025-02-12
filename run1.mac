@@ -1,7 +1,12 @@
 /run/initialize
 /process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
 /process/list
-
+/control/verbose 0
+/run/verbose 0
+/tracking/verbose 2
+/event/verbose 0
+/particle/select all
+/particle/verbose 0
 #/process/had/rdm/setPhotoEvaporationFile 3
 /process/had/rdm/applyARM true
 /tracking/verbose 1
@@ -9,5 +14,5 @@
 #/process/had/rdm/decayBiasProfile uniform
 #/process/had/rdm/hlThreshold 1e9 year
 #/progress/fullChain true
-/run/beamOn 100000
+/run/beamOn 100
 
